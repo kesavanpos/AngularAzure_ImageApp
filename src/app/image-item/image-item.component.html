@@ -1,0 +1,9 @@
+<!-- Updated image-item.component.html -->
+<mat-card>
+  <img mat-card-image [src]="image.url" alt="{{ image.name }}">
+  <mat-card-content>
+    <p>{{ image.name }}</p>
+    <p>{{ image.description }}</p>
+    <span>{{ image.date | date }}</span>
+  </mat-card-content>
+</mat-card>

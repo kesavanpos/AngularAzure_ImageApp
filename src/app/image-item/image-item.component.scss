@@ -1,0 +1,16 @@
+.grid-row {
+  display: flex;
+  align-items: center;
+}
+
+.grid-row span {
+  padding: 10px;
+  flex: 1;
+  text-align: center;
+}
+
+.grid-row img {
+  width: 100px;
+  height: auto;
+  margin: 0 auto; /* Center it in the flex child */
+}

@@ -1,0 +1,29 @@
+.user-email {
+  font-size: 1.2em;
+  font-weight: bold;
+  color: #333;
+}
+
+.button-container {
+  margin-top: 20px;
+}
+
+.logout-button,
+.refresh-button {
+  background-color: #4CAF50; /* Green */
+  border: none;
+  color: white;
+  padding: 10px 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin-right: 10px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.logout-button:hover,
+.refresh-button:hover {
+  background-color: #45a049; /* Darker green on hover */
+}

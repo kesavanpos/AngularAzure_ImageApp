@@ -1,0 +1,180 @@
+/* Add margin to the filter input field and center it */
+.filter-container {
+  margin-bottom: 20px;
+  //text-align: right;
+}
+
+/* Center align the table headers and cells */
+.image-table th.mat-header-cell,
+.image-table td.mat-cell {
+  text-align: center;
+  color: #4a4a4a; /* Uniform dark gray text color for table cells */
+}
+
+/* Style the image in the table */
+.image-table img {
+  border-radius: 5px;
+  height: auto;
+}
+
+/* Table header styling */
+.image-table th.mat-header-cell {
+  background-color: #930c02; /* Professional red */
+  color: #ffffff; /* White text color for headers */
+  font-weight: bold;
+}
+
+/* Row styling */
+.image-table tr.mat-row:nth-child(odd) {
+  background-color: #f1f1f1; /* Light gray background for odd rows */
+}
+
+.image-table tr.mat-row:nth-child(even) {
+  background-color: #ffffff; /* White background for even rows */
+}
+
+/* Add subtle borders and shadow for a more defined look */
+.image-table {
+  width: 100%;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+/* Table cell padding for better spacing */
+.image-table th.mat-header-cell,
+.image-table td.mat-cell {
+  padding: 16px;
+  border-right: 1px solid #ddd;
+}
+
+.image-table th.mat-header-cell:last-child,
+.image-table td.mat-cell:last-child {
+  border-right: none;
+}
+
+/* Ensure the paginator is aligned centrally and fully occupies width */
+mat-paginator {
+  display: flex;
+  justify-content: center;
+  margin-top: 10px;
+  width: 100%;
+  background-color: #930c02; /* Professional red */
+  color: #ffffff; /* White text color */
+  border-radius: 8px;
+}
+
+/* Style paginator controls */
+.mat-paginator-outer-container {
+  padding: 0 20px;
+}
+
+.mat-paginator-page-size-label,
+.mat-paginator-page-size-select,
+.mat-paginator-range-label,
+.mat-icon-button {
+  color: #ffffff; /* White text color for paginator controls */
+}
+
+.mat-paginator-icon {
+  color: #ffffff; /* White icon color */
+}
+
+.mat-paginator-element {
+  flex: 1;
+}
+
+/* Table container to prevent overflowing */
+.table-container {
+  margin-top: 20px;
+  position: relative;
+  background: #fcf9f9;
+  border-radius: 8px;
+  padding: 20px;
+  min-width: 600px;
+  overflow-x: auto;
+  background-image: linear-gradient(to top left, #F4CECE, #FBF4F4);
+
+  .image-table {
+    width: 100%;
+    font-size: 16px;
+
+    img {
+      border-radius: 5px;
+      max-width: 260px;
+      width: auto;
+    }
+  }
+}
+
+.upload-card {
+  margin-bottom: 20px;
+  padding: 20px;
+}
+
+mat-card-content p {
+  margin: 10px 0;
+}
+
+button {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.container {
+  margin-bottom: 20px;
+}
+
+.controls-container {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 20px;
+  padding-left: 25px;
+  border-radius: 6px;
+  flex-wrap: wrap;
+  padding: 10px;
+  background-image: linear-gradient(to top left, #F4CECE, #FBF4F4);
+
+  .filter-field {
+    flex: 0.25;
+  }
+
+  .upload-status {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+}
+
+mat-card-content p {
+  margin: 10px 0;
+}
+
+button {
+  margin-left: 5px;
+}
+
+.progress-bar-container {
+  margin: 15px 0;
+}
+
+.no-data-message {
+  text-align: center;
+  font-size: 1.2em;
+  color: #757575;
+  padding: 16px;
+  background-color: #f5f5f5;
+}
+.date-p {
+  border: 1px solid #ddd;
+  padding: 12px;
+  border-radius: 6px;
+  width: 190px;
+}
+
+.upload-status-text p {
+  max-width: 280px;
+  font-size: 12px;
+}
