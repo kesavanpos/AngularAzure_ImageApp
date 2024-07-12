@@ -9,5 +9,5 @@ export interface BlobImage {
   leaseStatus: string;
   accessTier: string;
   serverEncrypted: boolean;
-  url:string;
+  url: string;
 }

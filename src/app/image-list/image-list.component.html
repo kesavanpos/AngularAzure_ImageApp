@@ -59,7 +59,7 @@
       <td mat-cell *matCellDef="let element">{{ element.description }}</td>
     </ng-container>
 
-    <ng-container matColumnDef="date">
+    <ng-container matColumnDef="lastModified">
       <th mat-header-cell *matHeaderCellDef mat-sort-header class="width-minimum"> Uploaded Date </th>
       <td mat-cell *matCellDef="let element">{{ element.lastModified | date }}</td>
     </ng-container>

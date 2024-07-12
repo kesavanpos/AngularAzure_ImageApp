@@ -53,7 +53,13 @@ export class ImageListComponent implements OnInit, AfterViewInit {
   }
 
   dataSource = new MatTableDataSource<Image>();
-  displayedColumns: string[] = ['image', 'name', 'date', 'download', 'delete'];
+  displayedColumns: string[] = [
+    'image',
+    'name',
+    'lastModified',
+    'download',
+    'delete',
+  ];
 
   uploadInProgress: boolean = false;
   selectedFileName: string | null = null;
