@@ -23,10 +23,14 @@
     "@angular/router": "^14.2.0",
     "@auth0/angular-jwt": "^5.2.0",
     "@azure/storage-blob": "^12.23.0",
+    "file-save": "^0.2.0",
+    "file-saver": "^2.0.5",
     "firebase": "^10.12.2",
     "jsonwebtoken": "^9.0.2",
     "ngx-cookie-service": "^18.0.0",
     "rxjs": "~7.5.0",
+    "tiff": "^6.1.0",
+    "tiff.js": "^1.0.0",
     "timers-browserify": "^2.0.12",
     "tslib": "^2.3.0",
     "xml-js": "^1.6.11",
@@ -46,5 +50,10 @@
     "karma-jasmine": "~5.1.0",
     "karma-jasmine-html-reporter": "~2.0.0",
     "typescript": "~4.7.2"
+  },
+  "browser": {
+    "fs": false,
+    "path": false,
+    "os": false
   }
 }

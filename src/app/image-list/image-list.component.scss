@@ -84,6 +84,16 @@ mat-paginator {
   flex: 1;
 }
 
+.thumbnail{
+  width: 100px;
+  height:auto;
+}
+
+.thumbnail-tiff{
+  width:100px;
+  height:auto;
+}
+
 /* Table container to prevent overflowing */
 .table-container {
   margin-top: 20px;

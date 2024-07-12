@@ -1,6 +1,5 @@
 <div class="controls-container action-inputs mat-elevation-z8">
 
-
   <input type="date" id="sstart" name="1" class="date-p" (change)="setFromDate($event)" placeholder="From Date">
   <input type="date" id="eend" name="1" class="date-p" (change)="setToDate($event)" placeholder="To Date">
 
@@ -10,7 +9,7 @@
     <input matInput [(ngModel)]="searchText" (keyup)="applyFilters()" placeholder="Search images">
   </mat-form-field>
 
-  <input type="file" (change)="onFileSelected($event)" accept="image/*" hidden #fileInput />
+  <input type="file" (change)="onFileSelected($event)" accept="image/*,.tiff" hidden #fileInput />
   <button mat-raised-button color="primary" (click)="fileInput.click()" class="btn btn-primary">
     <mat-icon>file_upload</mat-icon> Select Image
   </button>
@@ -40,7 +39,13 @@
     <ng-container matColumnDef="image">
       <th mat-header-cell *matHeaderCellDef> Image </th>
       <td mat-cell *matCellDef="let element">
-        <img [src]="element.url" alt="Image" class="uploaded-image" width="250">
+        <ng-container *ngIf="element.contentType !== 'image/tiff'">
+          <img [src]="element.url" alt="Image" class="uploaded-image" width="250">
+        </ng-container>  
+        <ng-container *ngIf="element.contentType === 'image/tiff'">
+          <app-tiffimage [canvas]="getCanvasElement(element)" [imageUrl]="element.url"></app-tiffimage>
+          
+        </ng-container>
       </td>
     </ng-container>
 
@@ -57,6 +62,15 @@
     <ng-container matColumnDef="date">
       <th mat-header-cell *matHeaderCellDef mat-sort-header class="width-minimum"> Uploaded Date </th>
       <td mat-cell *matCellDef="let element">{{ element.lastModified | date }}</td>
+    </ng-container>
+
+    <ng-container matColumnDef="download">
+      <th mat-header-cell *matHeaderCellDef class="width-minimum"> Download </th>
+      <td mat-cell *matCellDef="let element">
+        <button mat-icon-button color="primary">
+          <mat-icon>cloud_download</mat-icon>
+        </button>
+      </td>
     </ng-container>
 
     <ng-container matColumnDef="delete">
