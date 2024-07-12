@@ -18,7 +18,7 @@ import { MatSnackBar } from '@angular/material/snack-bar';
 import { ConfirmdialogComponent } from '../confirmdialog/confirmdialog.component';
 import { MatDialog } from '@angular/material/dialog';
 import { HttpClient } from '@angular/common/http';
-//import { saveAs } from 'file-saver'; // Import file-saver for saving files
+import { saveAs } from 'file-saver'; // Import file-saver for saving files
 
 //import * as Tiff from 'tiff.js';
 // Declare the Tiff variable to avoid TypeScript errors
@@ -72,18 +72,18 @@ export class ImageListComponent implements OnInit, AfterViewInit {
     this.renderTiffImages();
   }
 
-  // Inside your component class
-  // downloadImage(image: BlobImage): void {
-  //   this.http.get(image.url, { responseType: 'blob' }).subscribe(
-  //     (blob: Blob) => {
-  //       saveAs(blob, image.name); // Use file-saver to save the blob as a file
-  //     },
-  //     (error) => {
-  //       console.error('Error downloading image', error);
-  //       // Handle error (e.g., show a message to the user)
-  //     }
-  //   );
-  // }
+  //Inside your component class
+  downloadImage(image: BlobImage): void {
+    this.http.get(image.url, { responseType: 'blob' }).subscribe(
+      (blob: Blob) => {
+        saveAs(blob, image.name); // Use file-saver to save the blob as a file
+      },
+      (error) => {
+        console.error('Error downloading image', error);
+        // Handle error (e.g., show a message to the user)
+      }
+    );
+  }
 
   isImageType(url: string, types: string[], contentType: string): boolean {
     return contentType === 'image/tiff';
