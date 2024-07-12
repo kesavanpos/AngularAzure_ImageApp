@@ -1,0 +1,42 @@
+mat-dialog-title {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+  
+  mat-dialog-content {
+    padding-top: 16px;
+  }
+  
+  mat-dialog-actions {
+    padding-top: 16px;
+  }
+  
+  .dialog-title {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    color: #f44336; /* Red color for title */
+  }
+  
+  .dialog-actions {
+    padding-top: 16px;
+  }
+  
+  .cancel-button {
+    margin-right: 35px !important; /* Add margin between buttons */
+  }
+
+  .delete-button {
+    background-color: #f44336; /* Red background for delete button */
+    color: white; /* White text for delete button */
+  }
+  
+  .cancel-button.mat-button {
+    /* Additional styles for cancel button */
+    color: #757575; /* Grey text color */
+  }
+  
+  .cancel-button.mat-button:hover {
+    background-color: #f0f0f0; /* Light grey background on hover */
+  }
