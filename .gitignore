@@ -11,6 +11,8 @@
 npm-debug.log
 yarn-error.log
 
+/anima
+
 # IDEs and editors
 .idea/
 .project
