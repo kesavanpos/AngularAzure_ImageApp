@@ -12,51 +12,102 @@ export class AppComponent implements OnInit {
   // Reference child component
   imageListComponent!: ImageListComponent;
 
-  formConfig = [
+  formConfig =
+  [
     {
-      name: 'firstName',
-      label: 'First Name',
-      type: 'text',
-      validations: {
-        required: true,
-        minlength: 3
-      }
+      "label": "Personal Information",
+      "fields": [
+        {
+          "name": "firstName",
+          "label": "First Name",
+          "type": "text",
+          "placeholder": "Enter your first name",
+          "validations": {
+            "required": true,
+            "minlength": 2,
+            "maxlength": 50
+          },
+          "defaultValue": ""
+        },
+        {
+          "name": "lastName",
+          "label": "Last Name",
+          "type": "text",
+          "placeholder": "Enter your last name",
+          "validations": {
+            "required": true,
+            "minlength": 2,
+            "maxlength": 50
+          },
+          "defaultValue": ""
+        },
+        {
+          "name": "email",
+          "label": "Email",
+          "type": "email",
+          "placeholder": "Enter your email",
+          "validations": {
+            "required": true,
+            "pattern": "[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\\.[a-zA-Z]{2,}"
+          },
+          "defaultValue": ""
+        }
+      ]
     },
     {
-      name: 'email',
-      label: 'Email Address',
-      type: 'email',
-      validations: {
-        required: true
-      }
+      "label": "Address Details",
+      "fields": [
+        {
+          "name": "street",
+          "label": "Street Address",
+          "type": "text",
+          "placeholder": "Enter your street address",
+          "validations": {
+            "required": true,
+            "minlength": 5
+          },
+          "defaultValue": ""
+        },
+        {
+          "name": "city",
+          "label": "City",
+          "type": "text",
+          "placeholder": "Enter your city",
+          "validations": {
+            "required": true,
+            "minlength": 3
+          },
+          "defaultValue": ""
+        },
+        {
+          "name": "postalCode",
+          "label": "Postal Code",
+          "type": "text",
+          "placeholder": "Enter your postal code",
+          "validations": {
+            "required": true,
+            "pattern": "^[0-9]{5,6}$"
+          },
+          "defaultValue": ""
+        }
+      ]
     },
     {
-      name: 'password',
-      label: 'Password',
-      type: 'password',
-      validations: {
-        required: true,
-        minlength: 8
-      }
-    },
-    {
-      name: 'comments',
-      label: 'Comments',
-      type: 'textarea',
-      validations: {
-        required: false
-      }
-    },
-    {
-      name: 'gender',
-      label: 'Gender',
-      type: 'dropdown',
-      options: ['Male', 'Female', 'Other'],
-      validations: {
-        required: true
-      }
+      "label": "File Upload",
+      "fields": [
+        {
+          "name": "profilePic",
+          "label": "Profile Picture",
+          "type": "file",
+          "validations": {
+            "required": true
+          },
+          "defaultValue": ""
+        }
+      ]
     }
-  ];
+  ]
+  
 
   constructor() {}
 
