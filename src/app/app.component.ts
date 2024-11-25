@@ -12,6 +12,52 @@ export class AppComponent implements OnInit {
   // Reference child component
   imageListComponent!: ImageListComponent;
 
+  formConfig = [
+    {
+      name: 'firstName',
+      label: 'First Name',
+      type: 'text',
+      validations: {
+        required: true,
+        minlength: 3
+      }
+    },
+    {
+      name: 'email',
+      label: 'Email Address',
+      type: 'email',
+      validations: {
+        required: true
+      }
+    },
+    {
+      name: 'password',
+      label: 'Password',
+      type: 'password',
+      validations: {
+        required: true,
+        minlength: 8
+      }
+    },
+    {
+      name: 'comments',
+      label: 'Comments',
+      type: 'textarea',
+      validations: {
+        required: false
+      }
+    },
+    {
+      name: 'gender',
+      label: 'Gender',
+      type: 'dropdown',
+      options: ['Male', 'Female', 'Other'],
+      validations: {
+        required: true
+      }
+    }
+  ];
+
   constructor() {}
 
   ngOnInit() {
@@ -28,7 +74,7 @@ export class AppComponent implements OnInit {
       mainElement.classList.toggle('sideBarCollapsed');
     }
   }
-  title = 'Azure Image(s)';
+  title = 'Controls';
   //images:Image = [];
 
   // images:Image = [

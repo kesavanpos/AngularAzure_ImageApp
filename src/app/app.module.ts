@@ -6,6 +6,7 @@ import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { environment } from '../environments/environment';
+import { ReactiveFormsModule } from '@angular/forms';
 
 // Import the MockStorageService
 import { ImageListComponent } from './image-list/image-list.component';
@@ -36,6 +37,7 @@ import { NavbarComponent } from './navbar/navbar.component';
 import { ConfirmdialogComponent } from './confirmdialog/confirmdialog.component';
 import { FormsModule } from '@angular/forms';
 import { TiffimageComponent } from './tiffimage/tiffimage.component';
+import { DynamicformgenerationComponent } from './dynamicformgeneration/dynamicformgeneration.component';
 
 export function tokenGetter() {
   return localStorage.getItem('access_token');
@@ -52,6 +54,7 @@ export function tokenGetter() {
     NavbarComponent,
     ConfirmdialogComponent,
     TiffimageComponent,
+    DynamicformgenerationComponent,
   ],
   imports: [
     BrowserModule,
@@ -70,6 +73,7 @@ export function tokenGetter() {
     MatDialogModule,
     BrowserAnimationsModule,
     FormsModule,
+    ReactiveFormsModule
   ],
   providers: [
     AzureImageUploadService,

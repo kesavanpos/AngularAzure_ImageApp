@@ -1,0 +1,78 @@
+<div class="container mt-5">
+    <div class="card shadow">
+      <div class="card-header bg-primary text-white">
+        <h4 class="mb-0">Dynamic Form</h4>
+      </div>
+      <div class="card-body">
+        <form [formGroup]="formGroup" (ngSubmit)="onSubmit()">
+          <div class="row g-3">
+            <!-- Loop through fields and create inputs -->
+            <div
+              *ngFor="let field of fields"
+              class="col-md-6 col-lg-4"
+            >
+              <div class="mb-3">
+                <label [for]="field.name" class="form-label">
+                  {{ field.label }}
+                </label>
+  
+                <!-- Text Input -->
+                <input
+                  *ngIf="field.type === 'text' || field.type === 'email' || field.type === 'password'"
+                  [id]="field.name"
+                  [type]="field.type"
+                  class="form-control"
+                  [formControlName]="field.name"
+                  [class.is-invalid]="formGroup.get(field.name)?.invalid && formGroup.get(field.name)?.touched"
+                />
+  
+                <!-- Textarea -->
+                <textarea
+                  *ngIf="field.type === 'textarea'"
+                  [id]="field.name"
+                  class="form-control"
+                  [formControlName]="field.name"
+                  rows="4"
+                  [class.is-invalid]="formGroup.get(field.name)?.invalid && formGroup.get(field.name)?.touched"
+                ></textarea>
+  
+                <!-- Dropdown -->
+                <select
+                  *ngIf="field.type === 'dropdown'"
+                  [id]="field.name"
+                  class="form-select"
+                  [formControlName]="field.name"
+                  [class.is-invalid]="formGroup.get(field.name)?.invalid && formGroup.get(field.name)?.touched"
+                >
+                  <option value="" disabled selected>Choose an option</option>
+                  <option *ngFor="let option of field.options" [value]="option">
+                    {{ option }}
+                  </option>
+                </select>
+  
+                <!-- Error Message -->
+                <div
+                  class="invalid-feedback"
+                  *ngIf="formGroup.get(field.name)?.invalid && formGroup.get(field.name)?.touched"
+                >
+                  {{ getErrorMessage(field.name) }}
+                </div>
+              </div>
+            </div>
+          </div>
+  
+          <!-- Submit Button -->
+          <div class="text-end">
+            <button
+              type="submit"
+              class="btn btn-primary px-4"
+              [disabled]="formGroup.invalid"
+            >
+              Submit
+            </button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+  
