@@ -1,0 +1,162 @@
+@font-face {
+  font-family: 'portal-icon';
+  src:
+    url('../fonts/portal-icon.ttf?l5p4yv') format('truetype'),
+    url('../fonts/portal-icon.woff?l5p4yv') format('woff'),
+    url('../fonts/portal-icon.svg?l5p4yv#portal-icon') format('svg');
+  font-weight: normal;
+  font-style: normal;
+  font-display: block;
+}
+
+[class^="portal-icon-"], [class*=" portal-icon-"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'portal-icon' !important;
+  speak: never;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+
+
+.portal-icon-remove-circle-minus:before {
+  content: "\e909";
+  color: #ec1b22;
+}
+.portal-icon-add-circle-plus:before {
+  content: "\e90a";
+}
+.portal-icon-add-solid-blunt:before {
+  content: "\e90b";
+  color: #ed1000;
+}
+.portal-icon-arrow-back:before {
+  content: "\e90c";
+}
+.portal-icon-arrow-down-circle:before {
+  content: "\e90d";
+  color: #fff;
+}
+.portal-icon-arrow-dropdown:before {
+  content: "\e90e";
+}
+.portal-icon-book-bookmark:before {
+  content: "\e90f";
+}
+.portal-icon-ci_download:before {
+  content: "\e910";
+  color: #ed1000;
+}
+.portal-icon-ci_upload:before {
+  content: "\e911";
+  color: #fff;
+}
+.portal-icon-click-download:before {
+  content: "\e912";
+  color: #ed1000;
+}
+.portal-icon-dashboard-home:before {
+  content: "\e913";
+}
+.portal-icon-edit:before {
+  content: "\e914";
+}
+.portal-icon-edit1:before {
+  content: "\e915";
+}
+.portal-icon-fe_search:before {
+  content: "\e916";
+  color: #ed1000;
+}
+.portal-icon-info-circle:before {
+  content: "\e917";
+  color: #006b5d;
+}
+.portal-icon-link-2:before {
+  content: "\e918";
+  color: #ed1000;
+}
+.portal-icon-messages:before {
+  content: "\e919";
+}
+.portal-icon-message-solid .path1:before {
+  content: "\e91a";
+  color: rgb(41, 45, 50);
+}
+.portal-icon-message-solid .path2:before {
+  content: "\e91b";
+  margin-left: -1em;
+  color: rgb(255, 255, 255);
+}
+.portal-icon-message-solid .path3:before {
+  content: "\e91c";
+  margin-left: -1em;
+  color: rgb(255, 255, 255);
+}
+.portal-icon-multiple-choice-outline:before {
+  content: "\e91d";
+}
+.portal-icon-outline-assignment:before {
+  content: "\e91e";
+}
+.portal-icon-pdf:before {
+  content: "\e91f";
+}
+.portal-icon-play-circle:before {
+  content: "\e920";
+  color: #fff;
+}
+.portal-icon-send-2:before {
+  content: "\e921";
+  color: #ed1000;
+}
+.portal-icon-start-application:before {
+  content: "\e922";
+  color: #ed1000;
+}
+.portal-icon-uil_calender:before {
+  content: "\e923";
+}
+.portal-icon-carbon_result-new:before {
+  content: "\e900";
+  color: #fff;
+}
+.portal-icon-contract_edit:before {
+  content: "\e901";
+  color: #fff;
+}
+.portal-icon-dashboard:before {
+  content: "\e902";
+  color: #fff;
+}
+.portal-icon-fluent_document:before {
+  content: "\e903";
+  color: #fff;
+}
+.portal-icon-notifications:before {
+  content: "\e904";
+  color: #ed1000;
+}
+.portal-icon-school:before {
+  content: "\e905";
+  color: #fff;
+}
+.portal-icon-sign-out:before {
+  content: "\e906";
+  color: #fff;
+}
+.portal-icon-two_pager:before {
+  content: "\e907";
+  color: #fff;
+}
+.portal-icon-user-avatar:before {
+  content: "\e908";
+  color: #ed1000;
+}

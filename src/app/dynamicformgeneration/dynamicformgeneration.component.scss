@@ -1,12 +1,53 @@
-.container {
-    max-width: 900px;
+.onlineapplication-tabs {
+  ul#myTab {
+    border: none;
+    display: flex;
+    justify-content: space-between;
+    background: var(--light-shade);
+    max-width: 1200px;
+    box-shadow: 0 3px 0px 0 rgba(0, 0, 0, 0.001),
+      0 0px 12px 0 rgba(0, 0, 0, 0.19) !important;
+    border: 2px solid #fff;
+    border-radius: 8px;
+    padding: 4px 28px;
+
+    .nav-link {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      font-size: 1rem;
+      font-weight: 500;
+      color: inherit;
+      border: none !important;
+
+      &.active {
+        background-color: transparent;
+        color: #930c02;
+        border-radius: 0;
+        box-shadow: none !important;
+        border: none;
+      }
+    }
   }
-  
-  .form-group {
-    margin-bottom: 1rem;
+
+  #myTabContent {
+    padding: 1rem;
+    border-radius: 12px;
+    margin-top: 1rem;
+
+    .information-gist {
+      padding: 1rem 2rem;
+      border-bottom: 3px solid rgba(157, 18, 23, 0.2);
+      border-radius: 16px;
+      margin-bottom: 2rem;
+    }
+
+    div.tab-pane {
+      max-width: 994px;
+    }
+
+    
   }
-  
-  button {
-    display: block;
-    margin: 0 auto;
-  }
+}

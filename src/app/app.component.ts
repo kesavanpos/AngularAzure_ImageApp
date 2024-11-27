@@ -30,6 +30,18 @@ export class AppComponent implements OnInit {
           "defaultValue": ""
         },
         {
+          "name": "middlename",
+          "label": "Middle Name",
+          "type": "text",
+          "placeholder": "Enter your middle name",
+          "validations": {
+            "required": true,
+            "minlength": 2,
+            "maxlength": 50
+          },
+          "defaultValue": ""
+        },
+        {
           "name": "lastName",
           "label": "Last Name",
           "type": "text",
